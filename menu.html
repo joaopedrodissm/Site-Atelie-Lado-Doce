@@ -129,7 +129,7 @@
               <h5 class="text-spacing-200 text-capitalize">Menu</h5>
               <ul class="nav list-category list-category-down-md-inline-block">
                 <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s">
-                  <a class="active" href="#tabs-4-1" data-toggle="tab">Docinhos</a>
+                  <a class= "active" href="#tabs-4-1" data-toggle="tab">Docinhos</a>
                 </li>
                 <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s">
                   <a href="#tabs-4-2" data-toggle="tab">Caseirinhos</a>
@@ -168,13 +168,13 @@
                 <div class="tab-pane fade" id="tabs-4-2">
                   <h4>Caseirinhos</h4>
                   <p>Lorem ipsum dolor sit amet...</p>
-                  <img src="images/caseirinho2.jpg" alt="" width="835" height="418"/>
+                  <img src="images/caseirinho.jpg" alt="" width="835" height="418"/>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-3">
                   <h4>Cookies</h4>
                   <p>Atualmente atendemos toda a cidade de Curitiba...</p>
-                  <img src="images/cookie1.jpg" alt="" width="835" height="418"/>
+                  <img src="images/cookie_chocolate.jpg" alt="" width="835" height="418"/>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-4">
@@ -198,13 +198,13 @@
                 <div class="tab-pane fade" id="tabs-4-7">
                   <h4>Ovos de Colher</h4>
                   <p>Deliciosos ovos recheados feitos com carinho...</p>
-                  <img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <img src="images/ovo_maracuja (2).jpg" alt="" width="835" height="418"/>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-8">
                   <h4>Carrinho Gourmet</h4>
                   <p>Nosso carrinho leva doces fresquinhos até você...</p>
-                  <img src="images/about-1-835x418.jpg" alt="" width="835" height="418"/>
+                  <img src="images/carrinho_gourmet.jpg" alt="" width="835" height="418"/>
                 </div>
       
               </div>
@@ -254,5 +254,27 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const params = new URLSearchParams(window.location.search);
+        const categoria = params.get("categoria");
+
+        if (categoria) {
+          // Remover a classe 'active' de todas as abas
+          const targetTab = document.querySelector(`a[href="#${categoria}"]`);
+          const targetPane = document.querySelector(`#${categoria}`);
+
+          
+          if (targetTab && targetPane) {
+            document.querySelectorAll(".nav .list-category-item a").forEach(tab => tab.classList.remove("active"));
+            document.querySelectorAll(".tab-pane").forEach(pane => pane.classList.remove("show", "active"));
+
+            // Adicionar 'active' à aba e ao painel correspondentes
+            targetTab.classList.add("active");
+            targetPane.classList.add("show", "active");
+          }
+        }
+      });
+    </script>
   </body>
 </html>
