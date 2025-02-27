@@ -21,6 +21,9 @@ function adicionarAoCarrinho() {
         { nome: "Caseirinho de Chocolate", id: "caseirinho-chocolate" },
         { nome: "Caseirinho de Leite Ninho", id: "caseirinho-leite" },
         { nome: "Caseirinho de Dois Amores", id: "caseirinho-doisamores" },
+        { nome: "Cookie Tradicional", id: "cookie-tradicional" },
+        { nome: "Cookie Red Velvet", id: "cookie-red" },
+        { nome: "Cookie de Chocolate", id: "cookie-chocolate" },
         { nome: "Locação do Carrinho Gourmet", id: "locacao-carrinho" }
         
     ];
