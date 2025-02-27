@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Sobre nós</title>
+    <title>Menu</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,7 +93,11 @@
                       </li>
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="menu.html">Menu</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Fale Conosco</a>
+                      <li class="rd-nav-item">
+                        <a class="rd-nav-link" href="carrinho.html">
+                          <i class="fas fa-shopping-cart"></i>
+                          <span id="carrinho-contador" class="contador-carrinho">0</span>
+                        </a>
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">Sobre nós</a>
                       </li>
@@ -153,59 +157,160 @@
                   <a href="#tabs-4-8" data-toggle="tab">Carrinho Gourmet</a>
                 </li>
               </ul>
-              <a class="button button-xl button-primary button-winona" href="https://wa.me/41988769179">Entrar em contato</a>
+              <a class="button button-xl button-primary button-winona" href="carrinho.html">Ver meu carrinho</a>
             </div>
       
             <div class="col-lg-8 col-xl-9">
               <!-- Tab panes-->
               <div class="tab-content tab-content-1">
                 <div class="tab-pane fade show active" id="tabs-4-1">
-                  <h4>Docinhos</h4>
-                  <p>Os nossos queridos e amados docinhos. Aqui você vai encontrar uma diversidade de opções </p>
+                  <h3>Docinhos</h3>
+                  <p>Os nossos queridos e amados docinhos. Aqui você vai encontrar uma variedade de opções: </p>
                   <img src="images/docinhos2.jpg" alt="" width="556" height="278"/>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Brigadeiro</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brigadeiro', -1)">-</button>
+                      <input type="number" id="brigadeiro" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brigadeiro', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Beijinho</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('beijinho', -1)">-</button>
+                      <input type="number" id="beijinho" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('beijinho', 1)">+</button>
+                    </div>
+          
+                   <div class="contador">
+                      <span>Dois amores</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('dois-amores', -1)">-</button>
+                      <input type="number" id="dois-amores" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('dois-amores', 1)">+</button>
+                   </div>
+                   <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                  </div>
+
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-2">
                   <h4>Caseirinhos</h4>
-                  <p>Lorem ipsum dolor sit amet...</p>
-                  <img src="images/caseirinho.jpg" alt="" width="835" height="418"/>
+                  <p>Os melhores bolos caseiros você encontra aqui!</p>
+                  <img src="images/caseirinho2.jpg" alt="" width="835" height="418"/>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Caseirinho de Chocolate</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-chocolate', -1)">-</button>
+                      <input type="number" id="caseirinho-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-chocolate', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Caseirinho de Leite Ninho</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-leite', -1)">-</button>
+                      <input type="number" id="caseirinho-leite" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-leite', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Caseirinho de Dois Amores</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-doisamores', -1)">-</button>
+                      <input type="number" id="caseirinho-doisamores" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-doisamores', 1)">+</button>
+                    </div>
+                    <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                  </div>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-3">
                   <h4>Cookies</h4>
-                  <p>Atualmente atendemos toda a cidade de Curitiba...</p>
-                  <img src="images/cookie_chocolate.jpg" alt="" width="835" height="418"/>
+                  <p>Você está pronto para se deliciar com os nossos cookies?</p>
+                  <img src="images/cookies.jpg" alt="" width="835" height="418"/>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Cookie de Chocolate</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-chocolate', -1)">-</button>
+                      <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Cookie de Red Velvet</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-red', -1)">-</button>
+                      <input type="number" id="cookie-red" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-red', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Cookie Tradicional</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-tradicional', -1)">-</button>
+                      <input type="number" id="cookie-tradiciona" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-tradiciona', 1)">+</button>
+                    </div>
+                  <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-4">
                   <h4>Brownies</h4>
-                  <p>Albus, dexter particulas grauiter consumere...</p>
+                  <p>Que tal se deliciar com os nossos brownies?</p>
                   <img src="images/brownie2.jpg" alt="" width="835" height="418"/>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-5">
                   <h4>Cestas</h4>
-                  <p>Albus, dexter particulas grauiter consumere...</p>
+                  <p>Monte sua cesta personalizada e surpreenda quem você ama!</p>
                   <img src="images/cesta1.jpg" alt="" width="835" height="418"/>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-6">
                   <h4>Empadinhas</h4>
-                  <p>Albus, dexter particulas grauiter consumere...</p>
+                  <p>Você nunca viu nada igual! As nossas empadinhas vão te surpreender!</p>
                   <img src="images/empadinha2.jpg" alt="" width="835" height="418"/>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-7">
                   <h4>Ovos de Colher</h4>
                   <p>Deliciosos ovos recheados feitos com carinho...</p>
-                  <img src="images/ovo_maracuja (2).jpg" alt="" width="835" height="418"/>
+                  <img src="images/ovo_maracuja.jpg" alt="" width="835" height="418"/>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-8">
                   <h4>Carrinho Gourmet</h4>
-                  <p>Nosso carrinho leva doces fresquinhos até você...</p>
-                  <img src="images/carrinho_gourmet.jpg" alt="" width="835" height="418"/>
-                </div>
+                  <p>Realize a locação do nosso carrinho gourmet para seu evento.</p>
+                  <br>
+                  <!-- Swiper Container -->
+                  <section class="section swiper-container swiper-slider swiper-slider-2 swiper-slider-3" data-loop="true" data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="images/carrinho_gourmet_completo.jpeg" alt="Carrinho Gourmet Completo" class="swiper-image">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="images/carrinho-decoracao.jpeg" alt="Carrinho Gourmet Decorado" class="swiper-image">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="images/carrinho-inteiro.jpeg" alt="Carrinho Gourmet Inteiro" class="swiper-image">
+                      </div>
+                   </div>
+ 
+              
+                      <!-- Swiper Pagination -->
+                    <div class="swiper-pagination" data-bullet-custom="true"></div>
+            
+                    <!-- Swiper Navigation -->
+                    <div class="swiper-button-prev">
+                      <div class="swiper-button-arrow"></div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <div class="swiper-button-arrow"></div>
+                    </div>
+                  </section>
+                  <div class="menu-contador">
+                    <div class="contador">
+                        <span>Locação do Carrinho Gourmet</span>
+                        <button class="btn-menos" onclick="alterarQuantidade('locacao-carrinho', -1)">-</button>
+                        <input type="number" id="locacao-carrinho" value="0" min="0" max="1" oninput="validarQuantidade(this)">
+                        <button class="btn-mais" onclick="alterarQuantidade('locacao-carrinho', 1)">+</button>
+                    </div>
+                    <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                 </div>
+                
+               </div>
       
               </div>
             </div>
@@ -229,9 +334,9 @@
                 <h5>Informações</h5>
                 <ul>
                     <li><a href="about-us.html">Sobre nós</a></li>
-                    <li><a href="#">Nossos Eventos</a></li>
-                    <li><a href="#">Cardápio</a></li>
-                    <li><a href="contacts.html">Contato</a></li>
+                    <li><a href="#">Carrinho Gourmet - locação</a></li>
+                    <li><a href="menu.html">Cardápio</a></li>
+                    <li><a href="carrinho.html">Carrinho de compras</a></li>
                 </ul>
             </div>
             <div class="footer-info">
@@ -254,6 +359,7 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/carrinho.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const params = new URLSearchParams(window.location.search);
@@ -275,6 +381,19 @@
           }
         }
       });
+      function alterarQuantidade(id, valor) {
+        let input = document.getElementById(id);
+        let quantidade = parseInt(input.value) + valor;
+        if (quantidade < 0) quantidade = 0;
+        input.value = quantidade;
+      }
+
+      function validarQuantidade(input) {
+        if (input.value < 0 || isNaN(input.value)) {
+            input.value = 0;
+        }
+      }
+
     </script>
   </body>
 </html>
