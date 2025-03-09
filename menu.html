@@ -165,21 +165,30 @@
               <div class="tab-content tab-content-1">
                 <div class="tab-pane fade show active" id="tabs-4-1">
                   <h3>Docinhos</h3>
-                  <p>Os nossos queridos e amados docinhos. Aqui você vai encontrar uma variedade de opções: </p>
-                  <img src="images/docinhos2.jpg" alt="" width="556" height="278"/>
+                  <p>Os nossos queridos e amados docinhos. Aqui você vai encontrar uma variedade de opções:</p>
+                  <img src="images/docinhos2.jpg" alt="" width="556" height="278"/><br><br>
+                  <h4>Tradicionais (Cento: R$ 90,00)</h4>
                   <div class="menu-contador">
                     <div class="contador">
+                      <span>Cento</span>
+                      <span class="preco-produto">R$ 90,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cento-tradicionais', -1)">-</button>
+                      <input type="number" id="cento-tradicionais" value="0" min="0">
+                      <button class="btn-mais" onclick="alterarQuantidade('cento-tradicionais', 1)">+</button>
+                    </div>
+            
+                    <!-- Itens Individuais -->
+                    <div class="contador">
                       <span>Brigadeiro</span>
-                      <span class="preco-produto" data-preco="7.50"></span>
+                      <span class="preco-produto">R$ 1,50</span>
                       <button class="btn-menos" onclick="alterarQuantidade('brigadeiro', -1)">-</button>
-                      <input type="number" id="brigadeiro" class="input-quantidade" value="0" min="0"
-                          oninput="validarQuantidade(this)" onchange="atualizarTotalCarrinho()">
+                      <input type="number" id="brigadeiro" value="0" min="0">
                       <button class="btn-mais" onclick="alterarQuantidade('brigadeiro', 1)">+</button>
-                   </div>
-                  
-                  
+                    </div>
+        
                     <div class="contador">
                       <span>Beijinho</span>
+                      <span class="preco-produto">R$ 1,50</span>
                       <button class="btn-menos" onclick="alterarQuantidade('beijinho', -1)">-</button>
                       <input type="number" id="beijinho" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('beijinho', 1)">+</button>
@@ -187,12 +196,200 @@
           
                    <div class="contador">
                       <span>Dois amores</span>
+                      <span class="preco-produto">R$ 1,50</span>
                       <button class="btn-menos" onclick="alterarQuantidade('dois-amores', -1)">-</button>
                       <input type="number" id="dois-amores" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('dois-amores', 1)">+</button>
                    </div>
+
+                   <div class="contador">
+                      <span>Leite Ninho</span>
+                      <span class="preco-produto">R$ 1,50</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('leite-ninho', -1)">-</button>
+                      <input type="number" id="leite-ninho" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('leite-ninho', 1)">+</button>
+                   </div>
+
+                   <div class="contador">
+                      <span>Cacau</span>
+                      <span class="preco-produto">R$ 1,50</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cacau', -1)">-</button>
+                      <input type="number" id="cacau" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cacau', 1)">+</button>
+                   </div>
+
+                   <div class="contador">
+                      <span>Amendoim</span>
+                      <span class="preco-produto">R$ 1,50</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('amendoim', -1)">-</button>
+                      <input type="number" id="amendoim" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('amendoim', 1)">+</button>
+                    </div>
+
+
+
+                   <p id="total-carrinho">Total: R$ 0,00</p>
+
                    <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
-                  </div>
+                  </div><br>
+
+                  <!-- Categoria: Gourmet -->
+                  <h4>Gourmet (Cento: R$ 160,00)</h4>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Cento</span>
+                      <span class="preco-produto">R$ 160,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cento-gourmet', -1)">-</button>
+                      <input type="number" id="cento-gourmet" value="0" min="0">
+                      <button class="btn-mais" onclick="alterarQuantidade('cento-gourmet', 1)">+</button>
+                    </div>
+            
+                    <!-- Itens Individuais -->
+                    <div class="contador">
+                      <span>Confete</span>
+                      <span class="preco-produto">R$ 2,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('confete', -1)">-</button>
+                      <input type="number" id="confete" value="0" min="0">
+                      <button class="btn-mais" onclick="alterarQuantidade('confete', 1)">+</button>
+                    </div>
+        
+                    <div class="contador">
+                      <span>Surpresa de Uva</span>
+                      <span class="preco-produto">R$ 2,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('surpresa-uva', -1)">-</button>
+                      <input type="number" id="surpresa-uva" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('surpresa-uva', 1)">+</button>
+                    </div>
+          
+                   <div class="contador">
+                      <span>Ninho com Nutella</span>
+                      <span class="preco-produto">R$ 2,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('ninho-nutella', -1)">-</button>
+                      <input type="number" id="ninho-nutella" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('ninho-nutella', 1)">+</button>
+                   </div>
+
+                   <div class="contador">
+                      <span>Café</span>
+                      <span class="preco-produto">R$ 2,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cafe', -1)">-</button>
+                      <input type="number" id="cafe" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cafe', 1)">+</button>
+                   </div>
+
+                   <div class="contador">
+                      <span>Café com Leite</span>
+                      <span class="preco-produto">R$ 2,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cafe-leite', -1)">-</button>
+                      <input type="number" id="cafe-leite" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cafe-leite', 1)">+</button>
+                   </div>
+
+                   <div class="contador">
+                      <span>Maracujá</span>
+                      <span class="preco-produto">R$ 2,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('maracuja', -1)">-</button>
+                      <input type="number" id="maracuja" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('maracuja', 1)">+</button>
+                    </div>
+
+                    <div class="contador">
+                      <span>Red Velvet</span>
+                      <span class="preco-produto">R$ 2,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('red-velvet', -1)">-</button>
+                      <input type="number" id="red-velvet" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('red-velvet', 1)">+</button>
+                    </div>
+
+                    <div class="contador">
+                      <span>Churros</span>
+                      <span class="preco-produto">R$ 2,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('churros', -1)">-</button>
+                      <input type="number" id="churros" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('churros', 1)">+</button>
+                    </div>
+
+
+
+                   <p id="total-carrinho">Total: R$ 0,00</p>
+
+                   <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                  </div><br>
+
+                  <!-- Categoria: Especiais -->
+                  <h4>Especiais (Cento: R$ 190,00)</h4>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Cento</span>
+                      <span class="preco-produto">R$ 90,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cento-especiais', -1)">-</button>
+                      <input type="number" id="cento-especiais" value="0" min="0">
+                      <button class="btn-mais" onclick="alterarQuantidade('cento-especiais', 1)">+</button>
+                    </div>
+            
+                    <!-- Itens Individuais -->
+                    <div class="contador">
+                      <span>Ferrero Rocher</span>
+                      <span class="preco-produto">R$ 3,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('ferrero', -1)">-</button>
+                      <input type="number" id="ferrero" value="0" min="0">
+                      <button class="btn-mais" onclick="alterarQuantidade('ferrero', 1)">+</button>
+                    </div>
+        
+                    <div class="contador">
+                      <span>Kinder Bueno</span>
+                      <span class="preco-produto">R$ 3,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('kinder', -1)">-</button>
+                      <input type="number" id="kinder" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('kinder', 1)">+</button>
+                    </div>
+  
+                    <div class="contador">
+                      <span>Pistache</span>
+                      <span class="preco-produto">R$ 3,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('pistache', -1)">-</button>
+                      <input type="number" id="pistache" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('pistache', 1)">+</button>
+                    </div>
+
+                    <div class="contador">
+                      <span>Cereija com Brigadeiro</span>
+                      <span class="preco-produto">R$ 3,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cereija-brigadeiro', -1)">-</button>
+                      <input type="number" id="cereija-brigadeiro" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cereija-brigadeiro', 1)">+</button>
+                    </div>
+
+                   <div class="contador">
+                      <span>Nozes</span>
+                      <span class="preco-produto">R$ 3,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('nozes', -1)">-</button>
+                      <input type="number" id="nozes" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('nozes', 1)">+</button>
+                    </div>
+
+                    <div class="contador">
+                      <span>Amêndoas</span>
+                      <span class="preco-produto">R$ 3,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('amendoas', -1)">-</button>
+                      <input type="number" id="amendoas" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('amendoas', 1)">+</button>
+                    </div>
+
+                    <div class="contador">
+                      <span>Romeu e Julieta</span>
+                      <span class="preco-produto">R$ 3,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('romeu-julieta', -1)">-</button>
+                      <input type="number" id="romeu-julieta" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('romeu-julieta', 1)">+</button>
+                    </div>
+
+
+
+                   <p id="total-carrinho">Total: R$ 0,00</p>
+
+                   <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                  </div><br>
 
                 </div>
       

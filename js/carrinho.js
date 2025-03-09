@@ -31,9 +31,23 @@ function atualizarTotalCarrinho() {
 // Função para adicionar itens ao carrinho e salvar no localStorage
 function adicionarAoCarrinho() {
     let produtos = [
-        { nome: "Brigadeiro", id: "brigadeiro", preco: 3.00 },
-        { nome: "Beijinho", id: "beijinho", preco: 3.00 },
-        { nome: "Dois Amores", id: "dois-amores", preco: 3.50 },
+        { nome: "Cento de Docinhos Tradicionais", id: "cento-tradicionais", preco: 90.00 },
+        { nome: "Brigadeiro", id: "brigadeiro", preco: 1.50 },
+        { nome: "Beijinho", id: "beijinho", preco: 1.50 },
+        { nome: "Dois Amores", id: "dois-amores", preco: 1.50 },
+        { nome: "Leite Ninho", id: "leite-ninho", preco: 1.50 },
+        { nome: "Cacau", id: "cacau", preco: 1.50 },
+        { nome: "Amendoim", id: "amendoim", preco: 1.50 },
+        {nome: "Cento de Docinhos Gourmet", id: "cento-gourmet", preco: 160.00 },
+        { nome: "Confete", id: "confete", preco: 2.00 },
+        { nome: "Surpresa de Uva", id: "surpresa-uva", preco: 2.00 },
+        { nome: "Ninho com Nutella", id: "ninho-nutella", preco: 2.00 },
+        { nome: "Café", id: "cafe", preco: 2.00 },
+        { nome: "Maracujá", id: "maracuja", preco: 2.00 },
+        { nome: "Red Velvet", id: "red-velvet", preco: 2.00 },
+        { nome: "Churros", id: "churros", preco: 2.00 },
+        
+
         { nome: "Caseirinho de Chocolate", id: "caseirinho-chocolate", preco: 5.00 },
         { nome: "Caseirinho de Leite Ninho", id: "caseirinho-leite", preco: 5.00 },
         { nome: "Caseirinho de Dois Amores", id: "caseirinho-doisamores", preco: 5.50 },
@@ -132,10 +146,10 @@ function enviarPedido() {
         return;
     }
 
-    let mensagem = "Olá Ateliê Lado Doce, gostaria de solicitar os seguintes pedidos:\n";
+    let mensagem = "Olá Ateliê Lado Doce, gostaria de solicitar os seguintes pedidos:\n\n";
     
     carrinho.forEach(item => {
-        mensagem += `- ${item.quantidade}x ${item.nome} - R$ ${(item.preco * item.quantidade).toFixed(2)}\n`;
+        mensagem += `- ${item.quantidade} ${item.nome} - R$ ${(item.preco * item.quantidade).toFixed(2)}\n`;
     });
 
     let mensagemCodificada = encodeURIComponent(mensagem);
