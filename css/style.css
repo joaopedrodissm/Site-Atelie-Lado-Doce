@@ -15433,3 +15433,8 @@ tr:last-child td {
     right: 20px;
     display: none; /* Esconde quando não há itens */
 }
+
+h1.oh {
+    overflow: visible;
+    white-space: normal;
+}

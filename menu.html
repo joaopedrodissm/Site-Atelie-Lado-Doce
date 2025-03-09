@@ -170,10 +170,14 @@
                   <div class="menu-contador">
                     <div class="contador">
                       <span>Brigadeiro</span>
+                      <span class="preco-produto" data-preco="7.50"></span>
                       <button class="btn-menos" onclick="alterarQuantidade('brigadeiro', -1)">-</button>
-                      <input type="number" id="brigadeiro" value="0" min="0" oninput="validarQuantidade(this)">
+                      <input type="number" id="brigadeiro" class="input-quantidade" value="0" min="0"
+                          oninput="validarQuantidade(this)" onchange="atualizarTotalCarrinho()">
                       <button class="btn-mais" onclick="alterarQuantidade('brigadeiro', 1)">+</button>
-                    </div>
+                   </div>
+                  
+                  
                     <div class="contador">
                       <span>Beijinho</span>
                       <button class="btn-menos" onclick="alterarQuantidade('beijinho', -1)">-</button>
@@ -250,6 +254,45 @@
                   <h4>Brownies</h4>
                   <p>Que tal se deliciar com os nossos brownies?</p>
                   <img src="images/brownie2.jpg" alt="" width="835" height="418"/>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Brownie - Tradicional</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-tradicional', -1)">-</button>
+                      <input type="number" id="cookie-tradicional" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-tradicional', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Brownie - Cobertura de Leite ninho</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-red', -1)">-</button>
+                      <input type="number" id="cookie-red" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-red', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Brownie - Cobertura de Brigadeiro</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-chocolate', -1)">-</button>
+                      <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Brownie - Cobertura de Nutella</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-chocolate', -1)">-</button>
+                      <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Brownie Pedaço - Nozes</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-chocolate', -1)">-</button>
+                      <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Brownie Pedaço - M&Ms</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-chocolate', -1)">-</button>
+                      <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
+                    </div>
+                    <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                  </div>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-5">
