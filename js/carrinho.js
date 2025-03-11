@@ -159,6 +159,9 @@ function enviarPedido() {
         mensagem += `- ${item.quantidade} ${item.nome} - R$ ${(item.preco * item.quantidade).toFixed(2)}\n`;
     });
 
+    let total = document.getElementById("total-carrinho").innerText;
+    mensagem += `\n${total}`; 
+
     let mensagemCodificada = encodeURIComponent(mensagem);
     let numeroWhatsApp = "5541988769179";
     let url = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
