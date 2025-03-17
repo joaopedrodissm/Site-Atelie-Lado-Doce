@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="pt-br">
   <head>
     <title>Menu</title>
     <meta name="format-detection" content="telephone=no">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    
    
   </head>
   <a href="https://wa.me/41988769179" class="whatsapp-float" target="_blank">
@@ -483,7 +484,6 @@
                 <div class="tab-pane fade" id="tabs-4-5">
                   <h4>Cestas</h4>
                   <p>Monte sua cesta personalizada e surpreenda quem você ama!</p>
-                  <img src="images/cesta1.jpg" alt="" width="835" height="418"/>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-6">
@@ -494,8 +494,11 @@
       
                 <div class="tab-pane fade" id="tabs-4-7">
                   <h4>Ovos de Colher</h4>
-                  <p>Deliciosos ovos recheados feitos com carinho...</p>
+                  <p>Deliciosos ovos de colher artesanais feitos com muito carinho...</p>
                   <img src="images/ovo_maracuja.jpg" alt="" width="835" height="418"/>
+                  <div class="menu-contador">
+                  
+                  </div>
                 </div>
       
                 <div class="tab-pane fade" id="tabs-4-8">
@@ -530,10 +533,11 @@
                   </section>
                   <div class="menu-contador">
                     <div class="contador">
-                        <span>Locação do Carrinho Gourmet</span>
-                        <button class="btn-menos" onclick="alterarQuantidade('locacao-carrinho', -1)">-</button>
-                        <input type="number" id="locacao-carrinho" value="0" min="0" max="1" oninput="validarQuantidade(this)">
-                        <button class="btn-mais" onclick="alterarQuantidade('locacao-carrinho', 1)">+</button>
+                      <span>Locação Carrinho Gourmet</span>
+                      <span class="preco-produto">R$ 150,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('carrinho-gourmet', -1)">-</button>
+                      <input type="number" id="carrinho-gourmet" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('carrinho-gourmet', 1)">+</button>
                     </div>
                     <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                  </div>
@@ -552,19 +556,19 @@
             <div class="footer-info">
                 <h5>especialidades</h5>
                 <ul>
-                    <li><a href="#">Docinhos</a></li>
-                    <li><a href="#">Caseirinho</a></li>
-                    <li><a href="#">Brigadeiros Gourmet</a></li>
-                    <li><a href="#">Empadinhas</a></li>
+                    <li><a href="menu.html?categoria=tabs-4-1">Docinhos</a></li>
+                    <li><a href="menu.html?categoria=tabs-4-2">Caseirinho</a></li>
+                    <li><a href="menu.html?categoria=tabs-4-3">Cookies</a></li>
+                    <li><a href="menu.html?categoria=tabs-4-5">Cestas</a></li>
+                    <li><a href="menu.html?categoria=tabs-4-8">Locação de carrinho gourmet</a></li>
                 </ul>
             </div>
             <div class="footer-info">
                 <h5>Informações</h5>
                 <ul>
                     <li><a href="about-us.html">Sobre nós</a></li>
-                    <li><a href="#">Carrinho Gourmet - locação</a></li>
                     <li><a href="menu.html">Cardápio</a></li>
-                    <li><a href="carrinho.html">Carrinho de compras</a></li>
+                    <li><a href="carrinho.html">Carrinho de Compras</a></li>
                 </ul>
             </div>
             <div class="footer-info">
@@ -588,6 +592,8 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/carrinho.js"></script>
+    
+    <script src="js/swipper.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const params = new URLSearchParams(window.location.search);

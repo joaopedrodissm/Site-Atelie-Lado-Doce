@@ -61,7 +61,8 @@ function adicionarAoCarrinho() {
         { nome: "Cookie Tradicional", id: "cookie-tradicional", preco: 6.00 },
         { nome: "Cookie Red Velvet", id: "cookie-red", preco: 6.50 },
         { nome: "Cookie de Chocolate", id: "cookie-chocolate", preco: 6.50 },
-        { nome: "Locação do Carrinho Gourmet", id: "locacao-carrinho", preco: 50.00 }
+        { nome: "Locação do Carrinho Gourmet", id: "carrinho-gourmet", preco: 150.00 },
+        
     ];
 
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
@@ -168,3 +169,5 @@ function enviarPedido() {
 
     window.open(url, "_blank");
 }
+
+
