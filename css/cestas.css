@@ -1,0 +1,199 @@
+.containerCesta {
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;  /* Fonte padrão */
+    line-height: 1.5;
+}
+
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Garantir que os itens comecem de cima */
+    max-width: 90%; /* Evita cortes em telas pequenas */
+}
+
+.product-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #f5e1da;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #5a3e36;
+    font-family: 'Arial', sans-serif;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #27ae60;
+  font-weight: bold;
+  margin: 5px 0 15px;
+}
+
+.view-items {
+    background: linear-gradient(135deg, #dba2eb, #F28D99, #cd74d5); /* Degradê */
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 200px;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.view-items:hover, .add-carrinho:focus, .button-xl:hover {
+    background: linear-gradient(135deg, #F28D99,#dba2eb, #c84a70); /* Inverte a direção do degradê no hover */
+    transform: scale(1.05); /* Efeito de leve aumento no tamanho ao passar o mouse */
+}
+
+.view-items:focus, .add-carrinho:focus, .button-xl:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(240, 157, 56, 0.7); /* Adiciona uma sombra quando o botão é focado */
+}
+
+
+
+/* Estilo dos botões de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ff6600;
+}
+
+/* Estilo do acordeão */
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.quantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  gap:5px;
+}
+
+.quantidade button {
+  background: linear-gradient(135deg, #c84a70, #F28D99);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.quantidade button:hover {
+    background: linear-gradient(135deg, #F28D99, #dba2eb);
+    transform: scale(1.1);
+}
+
+.quantidade .input-quantidade {
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.button-xl {
+    background: linear-gradient(135deg, #dba2eb, #F28D99, #cd74d5); /* Degradê entre amarelo, rosa e lilás */
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 200px;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    word-wrap: break-word;  /* Garante que o texto se quebre se necessário */
+    white-space: normal;    /* Permite que o texto quebre em múltiplas linhas se for muito longo */
+    text-align: center;     /* Garante que o texto esteja centralizado */
+}
+  
+.button-xl:hover {
+background: linear-gradient(135deg, #dba2eb, #F28D99);
+transform: scale(1.05);
+}
+
+.button-xl:focus {
+outline: none;
+box-shadow: 0 0 12px rgba(240, 157, 56, 0.6);
+}
+  
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .swiper-slide {
+        max-width: 80%; /* Ajusta o tamanho para centralização */
+    }
+
+    .product-img {
+        max-width: 180px;
+    }
+
+    .product-title {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 12px;
+    }
+
+    .view-items {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        transform: scale(0.8);
+    }
+    .quantidade {
+        justify-content: center;
+        flex-wrap: wrap; /* Garante melhor alinhamento em telas menores */
+    }
+    .button-xl {
+        background: linear-gradient(135deg, #dba2eb, #F28D99, #cd74d5); /* Degradê entre amarelo, rosa e lilás */
+        color: white;
+        border: none;
+        padding: 12px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 90%;
+        max-width: 200px;
+        font-size: 14px;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+}

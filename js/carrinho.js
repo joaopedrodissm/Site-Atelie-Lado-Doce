@@ -62,13 +62,22 @@ function adicionarAoCarrinho() {
         { nome: "Cookie Red Velvet", id: "cookie-red", preco: 6.50 },
         { nome: "Cookie de Chocolate", id: "cookie-chocolate", preco: 6.50 },
         { nome: "Locação do Carrinho Gourmet", id: "carrinho-gourmet", preco: 150.00 },
-        
+        { nome: "Cesta Chamego", id: "cesta-chamego", preco: 90.00 },
+        { nome: "Cesta Coração de Mãe", id: "cesta-coracao", preco: 140.00 },
+        { nome: "Cesta Carinho", id: "cesta-carinho", preco: 140.00 },
+        { nome: "Cesta Dengo", id: "cesta-dengo", preco: 95.00 },
     ];
 
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
     produtos.forEach(produto => {
-        let quantidade = parseInt(document.getElementById(produto.id).value);
+        let inputElement = document.getElementById(produto.id);
+        if (!inputElement) {
+            console.error(`Elemento com ID ${produto.id} não encontrado.`);
+            return;
+        }
+    
+        let quantidade = parseInt(inputElement.value);
         if (quantidade > 0) {
             let itemExistente = carrinho.find(item => item.nome === produto.nome);
             if (itemExistente) {
@@ -169,5 +178,3 @@ function enviarPedido() {
 
     window.open(url, "_blank");
 }
-
-

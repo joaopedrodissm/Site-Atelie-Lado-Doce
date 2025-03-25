@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="pt-br">
   <head>
-    <title>Sobre nós</title>
+    <title>CESTAS</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cestas.css">
    
   </head>
   <a href="https://wa.me/41988769179" class="whatsapp-float" target="_blank">
@@ -63,7 +64,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="about-us.html"><img class="brand-logo-dark" src="images/logo_atelie.png" alt="" width="198" height="66"/></a></div>
+                  <div class="rd-navbar-brand"><a class="brand" href="menu.html"><img class="brand-logo-dark" src="images/logo_atelie.png" alt="" width="198" height="66"/></a></div>
                 </div>
                 <div class="rd-navbar-right rd-navbar-nav-wrap">
                   <div class="rd-navbar-aside">
@@ -93,14 +94,15 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="menu.html">Menu</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="cestas.html">Cestas</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="cestas.html">Cestas</a>
                       </li>
                       <li class="rd-nav-item">
                         <a class="rd-nav-link" href="carrinho.html">
                           <i class="fas fa-shopping-cart"></i>
+                          <span id="carrinho-contador" class="contador-carrinho">0</span>
                         </a>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="about-us.html">Sobre nós</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">Sobre nós</a>
                       </li>
                     </ul>
                   </div>
@@ -115,52 +117,145 @@
       <section class="bg-gray-7">
         <div class="breadcrumbs-custom box-transform-wrap context-dark">
           <div class="container">
-            <h3 class="breadcrumbs-custom-title">Sobre nós</h3>
+            <h3 class="breadcrumbs-custom-title">Cestas</h3>
             <div class="breadcrumbs-custom-decor"></div>
           </div>
-          <div class="box-transform" style="background-image: url(images/sobrenos.jpg);"></div>
+          <div class="box-transform" style="background-image: url(images/cesta1.jpg);"></div>
         </div>
         <div class="container">
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.html">Home</a></li>
-            <li class="active">Sobre nós</li>
+            <li class="active">Cestas</li>
           </ul>
         </div>
       </section>
-      <section class="section section-lg bg-default">
-        <div class="container">
-          <div class="tabs-custom row row-50 justify-content-center flex-lg-row-reverse text-center text-md-left" id="tabs-4">
-            <div class="col-lg-4 col-xl-3">
-              <h5 class="text-spacing-200 text-capitalize">Há 3 anos deixando a vida mais doce </h5>
-              <ul class="nav list-category list-category-down-md-inline-block">
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">Sobre nós</a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s"><a href="#tabs-4-2" data-toggle="tab">Nosso menu</a></li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".2s"><a href="#tabs-4-3" data-toggle="tab">Cidade</a></li>
-              </ul><a class="button button-xl button-primary button-winona" href="https://wa.me/41988769179">Entrar em contato</a>
+      
+      <div class="containerCesta menu-contador">
+        <div class="swiper mySwipers">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="images/cesta1.jpg" class="product-img" alt="Cesta Chamego">
+                    <div class="product-title">Cesta Chamego</div>
+                    <div class="product-price">R$ 90,00</div>
+                    <div class="quantidade">
+                      <button class="btn-menos" onclick="alterarQuantidade('cesta-chamego', -1)">-</button>
+                      <input type="number" id="cesta-chamego" class="input-quantidade" value="0" min="0">
+                      <button class="btn-mais" onclick="alterarQuantidade('cesta-chamego', 1)">+</button>
+                    </div>
+                  <!-- Botão "Ver Itens" -->
+                  <button class="view-items">Ver Itens</button>
+                  <div class="accordion-content">
+                    <p>- 1 Caixa com visor</p>
+                    <p>- 1 Caseirinho 300g</p>
+                    <p>- 1 Potinho de frutas 100g</p>
+                    <p>- 1 Garrafa de suco 300ml</p>
+                    <p>- 1 Sache de café</p>
+                    <p>- 1 Iogurte</p>
+                    <p>- Frios</p>
+                    <p>- 2 Pães de Leite</p>
+                    <p>- 4 Empadinhas</p>
+                  </div>
+                  <!-- Botão "Adicionar ao Carrinho" -->
+                  <button class="button button-xl" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="swiper-slide">
+                  <img src="images/cesta1.jpg" class="product-img" alt="Cesta Coração de Mãe">
+                    <div class="product-title">Cesta Coração de Mãe</div>
+                    <div class="product-price">R$ 140,00</div>
+                    <div class="quantidade">
+                      <button class="btn-menos" onclick="alterarQuantidade('cesta-coracao', -1)">-</button>
+                      <input type="number" id="cesta-coracao" class="input-quantidade" value="0" min="0">
+                      <button class="btn-mais" onclick="alterarQuantidade('cesta-coracao', 1)">+</button>
+                   </div>
+                     <!-- Botão "Ver Itens" -->
+                    <button class="view-items">Ver Itens</button>
+                    <div class="accordion-content">
+                      <p>- 1 Caseirinho 500g</p>
+                      <p>- 1 Suco 200ml</p>
+                      <p>- 2 Potinhos de fruta misto</p>
+                      <p>- Frios</p>
+                      <p>- 4 Pães</p>
+                      <p>- 8 Empadinhas</p>
+                      <p>- 4 Docinhos</p>
+                      <p>- 2 Cookies</p>
+                      <p>- 1 Potinho de brigadeiro</p>
+                      <p>- 1 Iogurte</p>
+                    </div>
+                    <!-- Botão "Adicionar ao Carrinho" -->
+                    <button class="button button-xl" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="images/cesta3.jpeg" class="product-img" alt="Cesta Carinho">
+                  <div class="product-title"> Cesta Carinho</div>
+                  <div class="product-price">R$ 95,00</div>
+              
+                  <!-- Contador de quantidade centralizado -->
+                  <div class="quantidade">
+                      <button class="btn-menos" onclick="alterarQuantidade('cesta-carinho', -1)">-</button>
+                      <input type="number" id="cesta-carinho" class="input-quantidade" value="0" min="0">
+                      <button class="btn-mais" onclick="alterarQuantidade('cesta-carinho', 1)">+</button>
+                  </div>
+              
+                  <!-- Botão "Ver Itens" -->
+                  <button class="view-items">Ver Itens</button>
+                  
+                  <!-- Lista de itens -->
+                  <div class="accordion-content">
+                    <p>1 Suco 200ml</p>
+                    <p>2 Pães</p>
+                    <p>6 Empadinhas</p>
+                    <p>Frios</p>
+                    <p>1 Potinho de fruta</p>
+                    <p>1 Fatia de Brownie</p>
+                    <p>4 Docinhos</p>
+                    <p>1 Potinho de Brigadeiro</p>
+                  </div>
+              
+                  <!-- Botão "Adicionar ao Carrinho" -->
+                  <button class="button button-xl" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="images/cesta3.jpeg" class="product-img" alt="Cesta Dengo">
+                  <div class="product-title"> Cesta Dengo</div>
+                  <div class="product-price">R$ 95,00</div>
+              
+                  <!-- Contador de quantidade centralizado -->
+                  <div class="quantidade">
+                      <button class="btn-menos" onclick="alterarQuantidade('cesta-dengo', -1)">-</button>
+                      <input type="number" id="cesta-dengo" class="input-quantidade" value="0" min="0">
+                      <button class="btn-mais" onclick="alterarQuantidade('cesta-dengo', 1)">+</button>
+                  </div>
+              
+                  <!-- Botão "Ver Itens" -->
+                  <button class="view-items">Ver Itens</button>
+                  
+                  <!-- Lista de itens -->
+                  <div class="accordion-content">
+                    <p>1 Caseirinho 300g</p>
+                    <p>1 Potinho de frutas 100g</p>
+                    <p>1 Garrafa de suco 300ml</p>
+                    <p>1 Sache de Café</p>
+                    <p>1 Iogurte</p>
+                    <p>Frios</p>
+                    <p>2 Pães de Leite</p>
+                    <p>6 Empadinhas</p>
+                    <p>2 Cookies recheados</p>
+                    
+                  </div>
+              
+                  <!-- Botão "Adicionar ao Carrinho" -->
+                  <button class="button button-xl" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
+
             </div>
-            <div class="col-lg-8 col-xl-9">
-              <!-- Tab panes-->
-              <div class="tab-content tab-content-1">
-                <div class="tab-pane fade show active" id="tabs-4-1">
-                  <h4>Um pouco sobre nós</h4>
-                  <p>No coração do nosso ateliê, cada detalhe é feito com paixão e criatividade. Aqui, não apenas criamos produtos, mas damos vida a ideias, transformando sonhos em realidade através de cada traço, textura e cor.</p>
-                  <p>Desde 2022, Andressa tem se dedicado com paixão à arte da confeitaria, aprimorando suas técnicas na criação de docinhos, ovos de colher, empadinhas e outras delícias irresistíveis para tornar cada festa e evento ainda mais especial.</p><img src="images/brigadeiro_colher.jpg" alt="" width="556" height="278"/>
-                </div>
-                <div class="tab-pane fade" id="tabs-4-2">
-                  <h4>Um cardápio recheado de paixão e criatividade</h4>
-                  <p>Nosso cardápio possui uma variedade de opções e busca oferecer o melhor atendimento para você. </p>
-                  <p>Trabalhamos com docinhos, empadinhas e bolos caseiros para festas, eventos e casamentos. Também na criação de cestas personalizadas, ovos de colher para páscoa e locação de carrinho gourmet para eventos corporativos</p><img src="images/cesta4.jpeg" alt="" width="556" height="278"/>
-                </div>
-                <div class="tab-pane fade" id="tabs-4-3">
-                  <h4>Cidade</h4>
-                  <p>Atualmente atendemos toda a cidade de Curitiba e região metropolitana.</p>
-                  <p>Já recebemos encomendas de vários pontos de Curitiba e região metropolitana. Não hesitaremos em fazer uma viagem para você provar dos melhores doces da sua vida!</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-      </section>
+     </div>
 
       <footer class="section footer-custom">
         <div class="footer-container">
@@ -177,8 +272,9 @@
             <div class="footer-info">
                 <h5>Informações</h5>
                 <ul>
-                  <li><a href="menu.html">Cardápio</a></li>
-                  <li><a href="carrinho.html">Carrinho de Compras</a></li></li>
+                    <li><a href="about-us.html">Sobre nós</a></li>
+                    <li><a href="menu.html">Cardápio</a></li>
+                    <li><a href="carrinho.html">Carrinho de Compras</a></li>
                 </ul>
             </div>
             <div class="footer-info">
@@ -194,12 +290,17 @@
         <div class="footer-bottom">
             <p>&copy; <span class="copyright-year"></span> Ateliê Lado Doce - Todos os direitos reservados.</p>
         </div>
-    </footer>
+     </footer>
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/carrinho.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/cestas.js"></script>
+    
+
   </body>
 </html>
