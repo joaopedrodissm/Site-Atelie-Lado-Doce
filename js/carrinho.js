@@ -105,8 +105,8 @@ function carregarCarrinho() {
         linha.innerHTML = `
             <td>${item.nome}</td>
             <td>${item.quantidade}</td>
-            <td>R$ ${(item.preco * item.quantidade).toFixed(2)}</td>
-            <td><button onclick="removerItem(${index})">🗑️</button></td>
+            <td class="td-preco">R$ ${(item.preco * item.quantidade).toFixed(2)}</td>
+            <td><button class="btn-lixeira" onclick="removerItem(${index})">🗑️</button></td>
         `;
         tabela.appendChild(linha);
     });
@@ -119,8 +119,11 @@ function removerItem(index) {
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
     carrinho.splice(index, 1); // Remove o item da lista
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
+    
     carregarCarrinho();
+    atualizarContadorCarrinho(); // Chamar essa função aqui para atualizar o total corretamente
 }
+
 
 // Função para limpar todo o carrinho
 function limparCarrinho() {
@@ -144,7 +147,7 @@ function atualizarContadorCarrinho() {
 
     let totalCarrinho = document.getElementById("total-carrinho");
     if (totalCarrinho) {
-        totalCarrinho.textContent = `Total: R$ ${totalValor.toFixed(2)}`;
+        totalCarrinho.textContent = `Total no carrinho: R$ ${totalValor.toFixed(2)}`;
     }
 }
 

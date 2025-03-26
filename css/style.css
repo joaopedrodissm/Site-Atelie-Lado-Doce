@@ -15387,30 +15387,86 @@ tr:last-child td {
 }
 
 .btn-esvaziar {
-	background: #ff4d4d;
-	color: white;
-	padding: 6px 10px;
-	font-size: 12px;
-	border: none;
-	cursor: pointer;
-	border-radius: 6px;
-	transition: 0.3s;
+    background: linear-gradient(135deg, #ff4d4d, #cc0000); /* Degradê vermelho vibrante */
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    width: auto; /* Mantém um tamanho flexível */
+    min-width: 120px; /* Define um tamanho mínimo */
+    max-width: 250px; /* Limita para telas grandes */
 }
 
+/* Efeito ao passar o mouse */
 .btn-esvaziar:hover {
-	background: #cc0000;
+    background: linear-gradient(135deg, #ff6666, #b30000); /* Vermelho mais intenso no hover */
+    transform: scale(1.05); /* Leve aumento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.btn-enviar_pedido{
-	background: #BDB76B;
-	color: white;
-	padding: 6px 10px;
-	font-size: 12px;
-	border: none;
-	cursor: pointer;
-	border-radius: 6px;
-	transition: 0.3s;
+/* Efeito ao clicar */
+.btn-esvaziar:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 768px) {
+    .btn-esvaziar {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+        padding: 12px 0; /* Aumenta a área de toque */
+        font-size: 16px; /* Melhora legibilidade */
+        min-width: unset; /* Remove o tamanho mínimo fixo */
+    }
+}
+
+.btn-enviar_pedido {
+    background: linear-gradient(135deg, #25D366, #128C7E); /* Verde WhatsApp */
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+	align-items: center;
+	width: auto;
+    min-width: 150px;
+    max-width: 280px;
+	margin-bottom: 12px;
+	
+}
+
+/* Efeito ao passar o mouse */
+.btn-enviar_pedido:hover {
+    background: linear-gradient(135deg, #FFA500, #B8860B); /* Tom mais vibrante no hover */
+    transform: scale(1.05); /* Leve aumento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito ao clicar */
+.btn-enviar_pedido:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .btn-enviar_pedido {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+        padding: 12px 0;
+        font-size: 16px; /* Texto maior para melhor legibilidade */
+        min-width: unset;
+    }
+}
+
 
 /* Responsivo */
 @media (max-width: 600px) {
@@ -15439,3 +15495,19 @@ h1.oh {
     white-space: normal;
 }
 
+.btn-lixeira {
+    background: none; /* Remove fundo padrão */
+    border: none; /* Remove bordas */
+    font-size: 20px; /* Ajusta tamanho do ícone */
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn-lixeira:hover {
+    color: red; /* Muda a cor no hover */
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}
+/* impede de quebrar linha no preço */
+.td-preco {
+    white-space: nowrap;
+}
