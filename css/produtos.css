@@ -197,3 +197,31 @@ box-shadow: 0 0 12px rgba(240, 157, 56, 0.6);
     }
 
 }
+
+.tamanho-opcoes {
+    display: flex;
+    flex-direction: column; /* Alinha os botões em coluna */
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.tamanho-opcoes input {
+    display: none; /* Esconde os inputs */
+}
+
+.tamanho-label {
+    display: block; 
+    padding: 10px 15px;
+    border: 2px solid #cc0000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tamanho-opcoes input:checked + label {
+    background-color: #cc0000;
+    color: white;
+}
+

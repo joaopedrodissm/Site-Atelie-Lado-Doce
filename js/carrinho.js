@@ -66,6 +66,9 @@ function adicionarAoCarrinho() {
         { nome: "Cesta Coração de Mãe", id: "cesta-coracao", preco: 140.00 },
         { nome: "Cesta Carinho", id: "cesta-carinho", preco: 140.00 },
         { nome: "Cesta Dengo", id: "cesta-dengo", preco: 95.00 },
+        { nome: "Ovo de Colher Brigadeiro 185g", id: "ovo-colher-brigadeiro-185g", preco: 45.00 },
+        { nome: "Ovo de Colher Brigadeiro 385g", id: "ovo-colher-brigadeiro-385g", preco: 80.00 },
+        
     ];
 
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
@@ -180,4 +183,16 @@ function enviarPedido() {
     let url = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
 
     window.open(url, "_blank");
+}
+
+function atualizarPreco() {
+    let precoElemento = document.getElementById("preco-produto");
+    console.log(precoElemento); // Verificar se o elemento está sendo encontrado
+    
+    if (!precoElemento) {
+        console.error("Elemento #preco-produto não encontrado!");
+        return; // Evita o erro de null
+    }
+
+    
 }

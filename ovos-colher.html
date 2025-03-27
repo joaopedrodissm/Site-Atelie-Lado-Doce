@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="pt-br">
   <head>
-    <title>CESTAS</title>
+    <title>OVOS DE COLHER</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -94,9 +94,9 @@
                       </li>
                       <li class="rd-nav-item"><a class="rd-nav-link" href="menu.html">Menu</a>
                       </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="cestas.html">Cestas</a>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="cestas.html">Cestas</a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="ovos-colher.html">Ovos de Colher</a>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="ovos-colher.html">Ovos de Colher</a>
                       </li>
                       <li class="rd-nav-item">
                         <a class="rd-nav-link" href="carrinho.html">
@@ -119,15 +119,15 @@
       <section class="bg-gray-7">
         <div class="breadcrumbs-custom box-transform-wrap context-dark">
           <div class="container">
-            <h3 class="breadcrumbs-custom-title">Cestas</h3>
+            <h3 class="breadcrumbs-custom-title">Ovos de Colher</h3>
             <div class="breadcrumbs-custom-decor"></div>
           </div>
-          <div class="box-transform" style="background-image: url(images/cesta1.jpg);"></div>
+          <div class="box-transform" style="background-image: url(images/ovo_colher_brigadeiro.jpg);"></div>
         </div>
         <div class="container">
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.html">Home</a></li>
-            <li class="active">Cestas</li>
+            <li class="active">Ovos de Colher</li>
           </ul>
         </div>
       </section>
@@ -136,122 +136,87 @@
         <div class="swiper mySwipers">
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide">
-                    <img src="images/cesta1.jpg" class="product-img" alt="Cesta Chamego">
-                    <div class="product-title">Cesta Chamego</div>
-                    <div class="product-price">R$ 90,00</div>
-                    <div class="quantidade">
-                      <button class="btn-menos" onclick="alterarQuantidade('cesta-chamego', -1)">-</button>
-                      <input type="number" id="cesta-chamego" class="input-quantidade" value="0" min="0">
-                      <button class="btn-mais" onclick="alterarQuantidade('cesta-chamego', 1)">+</button>
-                    </div>
-                  <!-- Botão "Ver Itens" -->
-                  <button class="view-items">Ver Itens</button>
-                  <div class="accordion-content">
-                    <p>- 1 Caixa com visor</p>
-                    <p>- 1 Caseirinho 300g</p>
-                    <p>- 1 Potinho de frutas 100g</p>
-                    <p>- 1 Garrafa de suco 300ml</p>
-                    <p>- 1 Sache de café</p>
-                    <p>- 1 Iogurte</p>
-                    <p>- Frios</p>
-                    <p>- 2 Pães de Leite</p>
-                    <p>- 4 Empadinhas</p>
-                  </div>
-                  <!-- Botão "Adicionar ao Carrinho" -->
-                  <button class="button button-xl" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+              <div class="swiper-slide">
+                <img src="images/ovo_colher_brigadeiro.jpg" class="product-img" alt="Ovo de Colher Brigadeiro">
+                <div class="product-title">Brigadeiro</div>
+            
+                <div class="tamanho-opcoes">
+                    <!-- Opção 185g -->
+                    <input type="radio" id="tamanho-185g" name="tamanho-ovo-brigadeiro" value="185" checked onclick="atualizarPreco('preco-produto-185g')">
+                    <label for="tamanho-185g" class="tamanho-label">185g - R$ 45,00</label>
+            
+                    <!-- Opção 385g -->
+                    <input type="radio" id="tamanho-385g" name="tamanho-ovo-brigadeiro" value="385" onclick="atualizarPreco('preco-produto-385g')">
+                    <label for="tamanho-385g" class="tamanho-label">385g - R$ 80,00</label>
                 </div>
+            
+                <!-- Botão "Adicionar ao Carrinho" -->
+                <button class="button button-xl" onclick="adicionarAoCarrinho('ovo-colher-brigadeiro')">
+                    Adicionar ao Carrinho
+                </button>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="images/ovo_dois_amores.jpg" class="product-img" alt="Ovo de Colher Brigadeiro">
+                <div class="product-title">Dois Amores</div>
+            
+                <div class="tamanho-opcoes">
+                    <!-- Opção 185g -->
+                    <input type="radio" id="tamanho-185g" name="tamanho-ovo-brigadeiro" value="185" checked onclick="atualizarPreco('preco-produto-185g')">
+                    <label for="tamanho-185g" class="tamanho-label">185g - R$ 45,00</label>
+            
+                    <!-- Opção 385g -->
+                    <input type="radio" id="tamanho-385g" name="tamanho-ovo-brigadeiro" value="385" onclick="atualizarPreco('preco-produto-385g')">
+                    <label for="tamanho-385g" class="tamanho-label">385g - R$ 80,00</label>
+                </div>
+            
+                <!-- Botão "Adicionar ao Carrinho" -->
+                <button class="button button-xl" onclick="adicionarAoCarrinho('ovo-colher-brigadeiro')">
+                    Adicionar ao Carrinho
+                </button>
+              </div>
+            
+            
                 
-                <div class="swiper-slide">
-                  <img src="images/cesta1.jpg" class="product-img" alt="Cesta Coração de Mãe">
-                    <div class="product-title">Cesta Coração de Mãe</div>
-                    <div class="product-price">R$ 140,00</div>
-                    <div class="quantidade">
-                      <button class="btn-menos" onclick="alterarQuantidade('cesta-coracao', -1)">-</button>
-                      <input type="number" id="cesta-coracao" class="input-quantidade" value="0" min="0">
-                      <button class="btn-mais" onclick="alterarQuantidade('cesta-coracao', 1)">+</button>
-                   </div>
-                     <!-- Botão "Ver Itens" -->
-                    <button class="view-items">Ver Itens</button>
-                    <div class="accordion-content">
-                      <p>- 1 Caseirinho 500g</p>
-                      <p>- 1 Suco 200ml</p>
-                      <p>- 2 Potinhos de fruta misto</p>
-                      <p>- Frios</p>
-                      <p>- 4 Pães</p>
-                      <p>- 8 Empadinhas</p>
-                      <p>- 4 Docinhos</p>
-                      <p>- 2 Cookies</p>
-                      <p>- 1 Potinho de brigadeiro</p>
-                      <p>- 1 Iogurte</p>
-                    </div>
-                    <!-- Botão "Adicionar ao Carrinho" -->
-                    <button class="button button-xl" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+              <div class="swiper-slide">
+                <img src="images/ovo_dois_amores.jpg" class="product-img" alt="Ovo de Colher Brigadeiro">
+                <div class="product-title">Brigadeiro de Café</div>
+            
+                <div class="tamanho-opcoes">
+                    <!-- Opção 185g -->
+                    <input type="radio" id="tamanho-185g" name="tamanho-ovo-brigadeiro" value="185" checked onclick="atualizarPreco('preco-produto-185g')">
+                    <label for="tamanho-185g" class="tamanho-label">185g - R$ 45,00</label>
+            
+                    <!-- Opção 385g -->
+                    <input type="radio" id="tamanho-385g" name="tamanho-ovo-brigadeiro" value="385" onclick="atualizarPreco('preco-produto-385g')">
+                    <label for="tamanho-385g" class="tamanho-label">385g - R$ 80,00</label>
                 </div>
+            
+                <!-- Botão "Adicionar ao Carrinho" -->
+                <button class="button button-xl" onclick="adicionarAoCarrinho('ovo-colher-brigadeiro')">
+                    Adicionar ao Carrinho
+                </button>
+              </div>
 
-                <div class="swiper-slide">
-                  <img src="images/cesta3.jpeg" class="product-img" alt="Cesta Carinho">
-                  <div class="product-title"> Cesta Carinho</div>
-                  <div class="product-price">R$ 95,00</div>
-              
-                  <!-- Contador de quantidade centralizado -->
-                  <div class="quantidade">
-                      <button class="btn-menos" onclick="alterarQuantidade('cesta-carinho', -1)">-</button>
-                      <input type="number" id="cesta-carinho" class="input-quantidade" value="0" min="0">
-                      <button class="btn-mais" onclick="alterarQuantidade('cesta-carinho', 1)">+</button>
-                  </div>
-              
-                  <!-- Botão "Ver Itens" -->
-                  <button class="view-items">Ver Itens</button>
-                  
-                  <!-- Lista de itens -->
-                  <div class="accordion-content">
-                    <p>1 Suco 200ml</p>
-                    <p>2 Pães</p>
-                    <p>6 Empadinhas</p>
-                    <p>Frios</p>
-                    <p>1 Potinho de fruta</p>
-                    <p>1 Fatia de Brownie</p>
-                    <p>4 Docinhos</p>
-                    <p>1 Potinho de Brigadeiro</p>
-                  </div>
-              
-                  <!-- Botão "Adicionar ao Carrinho" -->
-                  <button class="button button-xl" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+              <div class="swiper-slide">
+                <img src="images/ovo_dois_amores.jpg" class="product-img" alt="Ovo de Colher Brigadeiro">
+                <div class="product-title">Beijinho</div>
+            
+                <div class="tamanho-opcoes">
+                    <!-- Opção 185g -->
+                    <input type="radio" id="tamanho-185g" name="tamanho-ovo-brigadeiro" value="185" checked onclick="atualizarPreco('preco-produto-185g')">
+                    <label for="tamanho-185g" class="tamanho-label">185g - R$ 45,00</label>
+            
+                    <!-- Opção 385g -->
+                    <input type="radio" id="tamanho-385g" name="tamanho-ovo-brigadeiro" value="385" onclick="atualizarPreco('preco-produto-385g')">
+                    <label for="tamanho-385g" class="tamanho-label">385g - R$ 80,00</label>
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="images/cesta3.jpeg" class="product-img" alt="Cesta Dengo">
-                  <div class="product-title"> Cesta Dengo</div>
-                  <div class="product-price">R$ 95,00</div>
-              
-                  <!-- Contador de quantidade centralizado -->
-                  <div class="quantidade">
-                      <button class="btn-menos" onclick="alterarQuantidade('cesta-dengo', -1)">-</button>
-                      <input type="number" id="cesta-dengo" class="input-quantidade" value="0" min="0">
-                      <button class="btn-mais" onclick="alterarQuantidade('cesta-dengo', 1)">+</button>
-                  </div>
-              
-                  <!-- Botão "Ver Itens" -->
-                  <button class="view-items">Ver Itens</button>
-                  
-                  <!-- Lista de itens -->
-                  <div class="accordion-content">
-                    <p>1 Caseirinho 300g</p>
-                    <p>1 Potinho de frutas 100g</p>
-                    <p>1 Garrafa de suco 300ml</p>
-                    <p>1 Sache de Café</p>
-                    <p>1 Iogurte</p>
-                    <p>Frios</p>
-                    <p>2 Pães de Leite</p>
-                    <p>6 Empadinhas</p>
-                    <p>2 Cookies recheados</p>
-                    
-                  </div>
-              
-                  <!-- Botão "Adicionar ao Carrinho" -->
-                  <button class="button button-xl" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
-                </div>
+            
+                <!-- Botão "Adicionar ao Carrinho" -->
+                <button class="button button-xl" onclick="adicionarAoCarrinho('ovo-colher-brigadeiro')">
+                    Adicionar ao Carrinho
+                </button>
+              </div>
 
             </div>
             <div class="swiper-button-next"></div>
