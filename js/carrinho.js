@@ -74,7 +74,26 @@ function adicionarAoCarrinho() {
         { nome: "Ovo de Colher Brigadeiro de Café 385g", id: "ovo-colher-cafe-385g", preco: 65.00 },
         { nome: "Ovo de Colher Beijinho 185g", id: "ovo-colher-beijinho-185g", preco: 45.00 },
         { nome: "Ovo de Colher Beijinho 385g", id: "ovo-colher-beijinho-385g", preco: 65.00 },
-        
+        { nome: "Ovo de Colher Surpresa de Uva 185g", id: "ovo-colher-surpresa-uva-185g", preco: 55.00 },
+        { nome: "Ovo de Colher Surpresa de Uva 385g", id: "ovo-colher-surpresa-uva-185g", preco: 75.00 },
+        { nome: "Ovo de Colher Ninho com Nutella 185g", id: "ovo-colher-ninho-nutella-185g", preco: 55.00 },
+        { nome: "Ovo de Colher Ninho com Nutella 385g", id: "ovo-colher-ninho-nutella-385g", preco: 75.00 },
+        { nome: "Ovo de Colher Ninho com Nutella e Morango 185g", id: "ovo-colher-ninho-nutella-morango-185g", preco: 55.00 },
+        { nome: "Ovo de Colher Ninho com Nutella e Morango 385g", id: "ovo-colher-ninho-nutella-morango-385g", preco: 75.00 },
+        { nome: "Ovo de Colher Maracujá 185g", id: "ovo-colher-maracuja-185g", preco: 55.00 },
+        { nome: "Ovo de Colher Maracujá 385g", id: "ovo-colher-maracuja-385g", preco: 75.00 },
+        { nome: "Ovo de Colher Brigadeiro com Morango 185g", id: "ovo-colher-brigadeiro-morango-185g", preco: 55.00 },
+        { nome: "Ovo de Colher Brigadeiro com Morango 385g", id: "ovo-colher-brigadeiro-morango-385g", preco: 75.00 },
+        { nome: "Ovo de Colher Raffaello 185g", id: "ovo-colher-raffaello-185g", preco: 65.00 },
+        { nome: "Ovo de Colher Raffaello 385g", id: "ovo-colher-raffaello-385g", preco: 85.00 },
+        { nome: "Ovo de Colher Ferrero Rocher 185g", id: "ovo-colher-ferrero-185g", preco: 65.00 },
+        { nome: "Ovo de Colher Ferrero Rocher 385g", id: "ovo-colher-ferrero-385g", preco: 85.00 },
+        { nome: "Ovo de Colher Kinder Bueno 185g", id: "ovo-colher-kinder-185g", preco: 65.00 },
+        { nome: "Ovo de Colher Kinder Bueno 385g", id: "ovo-colher-kinder-385g", preco: 85.00 },
+        { nome: "Kit Confeiteiro", id: "kit-confeiteiro", preco: 50.00 },
+        { nome: "Controle de Chocolate", id: "controle-chocolate", preco: 35.00 },
+        { nome: "Ovo de Colher Kids 185g", id: "ovo-colher-kids-200g", preco: 35.00 },
+        { nome: "Ovo de Colher Kids 385g", id: "ovo-colher-kids-400g", preco: 65.00 },
         
     ];
 
@@ -157,7 +176,7 @@ function atualizarContadorCarrinho() {
 
     let totalCarrinho = document.getElementById("total-carrinho");
     if (totalCarrinho) {
-        totalCarrinho.textContent = `Total no carrinho: R$ ${totalValor.toFixed(2)}`;
+        totalCarrinho.textContent = `Valor Total: R$ ${totalValor.toFixed(2)}`;
     }
 }
 
