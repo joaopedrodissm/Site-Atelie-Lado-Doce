@@ -67,7 +67,14 @@ function adicionarAoCarrinho() {
         { nome: "Cesta Carinho", id: "cesta-carinho", preco: 140.00 },
         { nome: "Cesta Dengo", id: "cesta-dengo", preco: 95.00 },
         { nome: "Ovo de Colher Brigadeiro 185g", id: "ovo-colher-brigadeiro-185g", preco: 45.00 },
-        { nome: "Ovo de Colher Brigadeiro 385g", id: "ovo-colher-brigadeiro-385g", preco: 80.00 },
+        { nome: "Ovo de Colher Brigadeiro 385g", id: "ovo-colher-brigadeiro-385g", preco: 65.00 },
+        { nome: "Ovo de Colher Dois Amores 185g", id: "ovo-colher-dois-amores-185g", preco: 45.00 },
+        { nome: "Ovo de Colher Dois Amores 385g", id: "ovo-colher-dois-amores-385g", preco: 65.00 },
+        { nome: "Ovo de Colher Brigadeiro de Café 185g", id: "ovo-colher-cafe-185g", preco: 45.00 },
+        { nome: "Ovo de Colher Brigadeiro de Café 385g", id: "ovo-colher-cafe-385g", preco: 65.00 },
+        { nome: "Ovo de Colher Beijinho 185g", id: "ovo-colher-beijinho-185g", preco: 45.00 },
+        { nome: "Ovo de Colher Beijinho 385g", id: "ovo-colher-beijinho-385g", preco: 65.00 },
+        
         
     ];
 
@@ -185,14 +192,14 @@ function enviarPedido() {
     window.open(url, "_blank");
 }
 
-function atualizarPreco() {
-    let precoElemento = document.getElementById("preco-produto");
-    console.log(precoElemento); // Verificar se o elemento está sendo encontrado
+// function atualizarPreco() {
+//     let precoElemento = document.getElementById("preco-produto");
+//     console.log(precoElemento); // Verificar se o elemento está sendo encontrado
     
-    if (!precoElemento) {
-        console.error("Elemento #preco-produto não encontrado!");
-        return; // Evita o erro de null
-    }
+//     if (!precoElemento) {
+//         console.error("Elemento #preco-produto não encontrado!");
+//         return; // Evita o erro de null
+//     }
 
     
-}
+// }

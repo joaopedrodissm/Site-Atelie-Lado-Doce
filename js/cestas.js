@@ -23,3 +23,13 @@ viewItemsButtons.forEach(button => {
             accordionContent.style.display === 'block' ? 'none' : 'block';
     });
 });
+
+function alterarQuantidadeOvos(id, quantidade) {
+    let input = document.getElementById(id);
+    if (input) {
+        let valorAtual = parseInt(input.value, 10) || 0;
+        let novoValor = Math.max(0, valorAtual + quantidade); // Garante que o valor não fique negativo
+        input.value = novoValor;
+    }
+}
+

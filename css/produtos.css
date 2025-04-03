@@ -163,11 +163,11 @@ box-shadow: 0 0 12px rgba(240, 157, 56, 0.6);
     }
 
     .product-title {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .product-price {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .view-items {
@@ -179,8 +179,11 @@ box-shadow: 0 0 12px rgba(240, 157, 56, 0.6);
         transform: scale(0.8);
     }
     .quantidade {
+        display: flex;
+        align-items: center;
         justify-content: center;
-        flex-wrap: wrap; /* Garante melhor alinhamento em telas menores */
+        flex-wrap: nowrap; /* Impede quebra de linha */
+        gap: 2px;
     }
     .button-xl {
         background: linear-gradient(135deg, #dba2eb, #F28D99, #cd74d5); /* Degradê entre amarelo, rosa e lilás */
@@ -223,5 +226,19 @@ box-shadow: 0 0 12px rgba(240, 157, 56, 0.6);
 .tamanho-opcoes input:checked + label {
     background-color: #cc0000;
     color: white;
+}
+
+/* FEITO NO DIA 31-03-2025 PARA OS OVOS DE COLHER */ 
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
 }
 
