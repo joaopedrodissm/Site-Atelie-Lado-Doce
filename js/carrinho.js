@@ -58,9 +58,14 @@ function adicionarAoCarrinho() {
         { nome: "Caseirinho de Chocolate", id: "caseirinho-chocolate", preco: 5.00 },
         { nome: "Caseirinho de Leite Ninho", id: "caseirinho-leite", preco: 5.00 },
         { nome: "Caseirinho de Dois Amores", id: "caseirinho-doisamores", preco: 5.50 },
-        { nome: "Cookie Tradicional", id: "cookie-tradicional", preco: 6.00 },
-        { nome: "Cookie Red Velvet", id: "cookie-red", preco: 6.50 },
-        { nome: "Cookie de Chocolate", id: "cookie-chocolate", preco: 6.50 },
+        { nome: "Cookie Tradicional", id: "cookie-tradicional", preco: 3.50 },
+        { nome: "Cookie Red Velvet", id: "cookie-red", preco: 3.50 },
+        { nome: "Cookie de Chocolate", id: "cookie-chocolate", preco: 3.50 },
+        { nome: "Cookie de Nutella", id: "cookie-nutella", preco: 6.00 },
+        { nome: "Cookie de Red Velvet Recheado", id: "cookie-red-recheado", preco: 6.00 },
+        { nome: "Cookie de Dois Amores", id: "cookie-doisamores", preco: 6.00 },
+        { nome: "Cookie de Maracujá", id: "cookie-maracuja", preco: 6.00 },
+        { nome: "Cookie de Nevado", id: "cookie-nevado", preco: 6.00 },
         { nome: "Locação do Carrinho Gourmet", id: "carrinho-gourmet", preco: 150.00 },
         { nome: "Cesta Chamego", id: "cesta-chamego", preco: 90.00 },
         { nome: "Cesta Coração de Mãe", id: "cesta-coracao", preco: 140.00 },
@@ -75,7 +80,7 @@ function adicionarAoCarrinho() {
         { nome: "Ovo de Colher Beijinho 185g", id: "ovo-colher-beijinho-185g", preco: 45.00 },
         { nome: "Ovo de Colher Beijinho 385g", id: "ovo-colher-beijinho-385g", preco: 65.00 },
         { nome: "Ovo de Colher Surpresa de Uva 185g", id: "ovo-colher-surpresa-uva-185g", preco: 55.00 },
-        { nome: "Ovo de Colher Surpresa de Uva 385g", id: "ovo-colher-surpresa-uva-185g", preco: 75.00 },
+        { nome: "Ovo de Colher Surpresa de Uva 385g", id: "ovo-colher-surpresa-uva-385g", preco: 75.00 },
         { nome: "Ovo de Colher Ninho com Nutella 185g", id: "ovo-colher-ninho-nutella-185g", preco: 55.00 },
         { nome: "Ovo de Colher Ninho com Nutella 385g", id: "ovo-colher-ninho-nutella-385g", preco: 75.00 },
         { nome: "Ovo de Colher Ninho com Nutella e Morango 185g", id: "ovo-colher-ninho-nutella-morango-185g", preco: 55.00 },
@@ -99,15 +104,19 @@ function adicionarAoCarrinho() {
 
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
+    let adicionouItem = false;
+
     produtos.forEach(produto => {
         let inputElement = document.getElementById(produto.id);
         if (!inputElement) {
             console.error(`Elemento com ID ${produto.id} não encontrado.`);
             return;
         }
-    
+
         let quantidade = parseInt(inputElement.value);
         if (quantidade > 0) {
+            adicionouItem = true; // Marcou que adicionou pelo menos 1 item
+
             let itemExistente = carrinho.find(item => item.nome === produto.nome);
             if (itemExistente) {
                 itemExistente.quantidade += quantidade;
@@ -116,6 +125,11 @@ function adicionarAoCarrinho() {
             }
         }
     });
+
+    if (!adicionouItem) {
+        alert("Por favor, escolha pelo menos 1 item para adicionar ao carrinho.");
+        return; // Para a função aqui e não salva nada no localStorage
+    }
 
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
     atualizarContadorCarrinho();

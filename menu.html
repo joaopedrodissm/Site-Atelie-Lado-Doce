@@ -416,7 +416,8 @@
                 <div class="tab-pane fade" id="tabs-4-3">
                   <h4>Cookies</h4>
                   <p>Você está pronto para se deliciar com os nossos cookies?</p>
-                  <img src="images/cookies.jpg" alt="" width="835" height="418"/>
+                  <img src="images/cookies.jpg" alt="" width="835" height="418"/><br><br>
+                  <h4>Tradicionais</h4>
                   <div class="menu-contador">
                     <div class="contador">
                       <span>Cookie Tradicional</span>
@@ -436,8 +437,44 @@
                       <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
                     </div>
-                    <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
-                  </div>
+                  </div><br>
+                  <h4>Recheados</h4>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Cookie de Nutella</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-nutella', -1)">-</button>
+                      <input type="number" id="cookie-nutella" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-nutella', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Cookie de Red Velvet</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-red-recheado', -1)">-</button>
+                      <input type="number" id="cookie-red-recheado" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-red-recheado', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Cookie de Dois Amores</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-doisamores', -1)">-</button>
+                      <input type="number" id="cookie-doisamores" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-doisamores', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Cookie de Maracujá</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-maracuja', -1)">-</button>
+                      <input type="number" id="cookie-maracuja" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-maracuja', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Cookie Nevado</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('cookie-nevado', -1)">-</button>
+                      <input type="number" id="cookie-nevado" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('cookie-nevado', 1)">+</button>
+                    </div>
+                  </div><br>
+                  
+                  <p id="total-carrinho">Valor Total: R$ 0,00</p>
+
+                  <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                 </div>
 
                 <div class="tab-pane fade" id="tabs-4-4">
