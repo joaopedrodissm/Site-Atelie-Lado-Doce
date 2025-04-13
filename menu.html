@@ -388,26 +388,50 @@
       
                 <div class="tab-pane fade" id="tabs-4-2">
                   <h4>Caseirinhos</h4>
-                  <p>Os melhores bolos caseiros você encontra aqui!</p>
-                  <img src="images/caseirinho2.jpg" alt="" width="835" height="418"/>
-                  <div class="menu-contador">
+                  <p>Os melhores bolos caseiros você encontra aqui!</p><br>
+                  <section class="section swiper-container swiper-slider swiper-slider-2 swiper-slider-3" data-loop="true" data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="images/caseirinho_leite_ninho_morango.jpeg" alt="Carrinho Gourmet Completo" class="swiper-image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/caseirinho_limao.jpeg" alt="Carrinho Gourmet Inteiro" class="swiper-image">
+                        </div>
+                   </div>
+ 
+              
+                      <!-- Swiper Pagination -->
+                    <div class="swiper-pagination" data-bullet-custom="true"></div>
+            
+                    <!-- Swiper Navigation -->
+                    <div class="swiper-button-prev">
+                      <div class="swiper-button-arrow"></div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <div class="swiper-button-arrow"></div>
+                    </div>
+                  </section><br><br>
+                  <div class="menu">
                     <div class="contador">
-                      <span>Caseirinho de Chocolate</span>
-                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-chocolate', -1)">-</button>
-                      <input type="number" id="caseirinho-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
-                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-chocolate', 1)">+</button>
+                      <span>Caseirinho Chocolate c/ Morango</span>
+                      <span class="preco-produto">R$ 30,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-chocolate-morango', -1)">-</button>
+                      <input type="number" id="caseirinho-chocolate-morango" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-chocolate-morango', 1)">+</button>
                     </div>
                     <div class="contador">
-                      <span>Caseirinho de Leite Ninho</span>
-                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-leite', -1)">-</button>
-                      <input type="number" id="caseirinho-leite" value="0" min="0" oninput="validarQuantidade(this)">
-                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-leite', 1)">+</button>
+                      <span>Caseirinho de Leite Ninho com Morango</span>
+                      <span class="preco-produto">R$ 30,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-ninho-morango', -1)">-</button>
+                      <input type="number" id="caseirinho-ninho-morango" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-ninho-morango', 1)">+</button>
                     </div>
                     <div class="contador">
-                      <span>Caseirinho de Dois Amores</span>
-                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-doisamores', -1)">-</button>
-                      <input type="number" id="caseirinho-doisamores" value="0" min="0" oninput="validarQuantidade(this)">
-                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-doisamores', 1)">+</button>
+                      <span>Caseirinho de Ninho com Morango e Nutella</span>
+                      <span class="preco-produto">R$ 35,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-ninnho-nutella', -1)">-</button>
+                      <input type="number" id="caseirinho-ninnho-nutella" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-ninnho-nutella', 1)">+</button>
                     </div>
                     <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                   </div>
