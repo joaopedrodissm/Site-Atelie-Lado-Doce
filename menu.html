@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    
+
    
   </head>
   <a href="carrinho.html" class="botao-carrinho-flutuante">
@@ -152,9 +152,9 @@
                 <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".4s">
                   <a href="cestas.html" data-toggle="tab">Cestas</a>
                 </li>
-                <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".5s">
+                <!--li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".5s">
                   <a href="#tabs-4-6" data-toggle="tab">Empadinhas</a>
-                </li>
+                </li-->
                 <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".6s">
                   <a href="ovos-colher.html" data-toggle="tab">Ovos de Colher</a>
                 </li>
@@ -380,7 +380,7 @@
                     </div>
 
                   </div><br>
-                  <p id="total-carrinho">Total no carrinho: R$ 0,00</p>
+                  <!--p id="total-carrinho">Total no carrinho: R$ 0,00</p-->
 
                   <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
 
@@ -388,7 +388,7 @@
       
                 <div class="tab-pane fade" id="tabs-4-2">
                   <h4>Caseirinhos</h4>
-                  <p>Os melhores bolos caseiros você encontra aqui!</p><br>
+                  <p>Já pensou em provar um bolo caseirinho hoje? Os nossos caseirinhos são feitos com muito carinho e contam com um recheio especial!</p><br>
                   <section class="section swiper-container swiper-slider swiper-slider-2 swiper-slider-3" data-loop="true" data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -413,25 +413,53 @@
                   </section><br><br>
                   <div class="menu">
                     <div class="contador">
-                      <span>Caseirinho Chocolate c/ Morango</span>
+                      <span>Caseirinho Chocolate c/ Morango (800g)</span>
                       <span class="preco-produto">R$ 30,00</span>
                       <button class="btn-menos" onclick="alterarQuantidade('caseirinho-chocolate-morango', -1)">-</button>
                       <input type="number" id="caseirinho-chocolate-morango" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('caseirinho-chocolate-morango', 1)">+</button>
                     </div>
                     <div class="contador">
-                      <span>Caseirinho de Leite Ninho com Morango</span>
+                      <span>Caseirinho de Leite Ninho com Morango(800g)</span>
                       <span class="preco-produto">R$ 30,00</span>
                       <button class="btn-menos" onclick="alterarQuantidade('caseirinho-ninho-morango', -1)">-</button>
                       <input type="number" id="caseirinho-ninho-morango" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('caseirinho-ninho-morango', 1)">+</button>
                     </div>
                     <div class="contador">
-                      <span>Caseirinho de Ninho com Morango e Nutella</span>
+                      <span>Caseirinho de Ninho com Morango e Nutella (800g)</span>
                       <span class="preco-produto">R$ 35,00</span>
-                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-ninnho-nutella', -1)">-</button>
-                      <input type="number" id="caseirinho-ninnho-nutella" value="0" min="0" oninput="validarQuantidade(this)">
-                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-ninnho-nutella', 1)">+</button>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-ninho-nutella', -1)">-</button>
+                      <input type="number" id="caseirinho-ninho-nutella" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-ninho-nutella', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Caseirinho de Laranja (480g)</span>
+                      <span class="preco-produto">R$ 18,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-laranja', -1)">-</button>
+                      <input type="number" id="caseirinho-laranja" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-laranja', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Caseirinho de Chocolate (480g)</span>
+                      <span class="preco-produto">R$ 18,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-chocolate', -1)">-</button>
+                      <input type="number" id="caseirinho-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-chocolate', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Caseirinho de Cenoura (480g)</span>
+                      <span class="preco-produto">R$ 18,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-cenoura', -1)">-</button>
+                      <input type="number" id="caseirinho-cenoura" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-cenoura', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Caseirinho de Ninho (480g)</span>
+                      <span class="preco-produto">R$ 18,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('caseirinho-ninho', -1)">-</button>
+                      <input type="number" id="caseirinho-ninho" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('caseirinho-ninho', 1)">+</button>
                     </div>
                     <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                   </div>
@@ -445,18 +473,21 @@
                   <div class="menu-contador">
                     <div class="contador">
                       <span>Cookie Tradicional</span>
+                      <span class="preco-produto">R$ 3,50</span>
                       <button class="btn-menos" onclick="alterarQuantidade('cookie-tradicional', -1)">-</button>
                       <input type="number" id="cookie-tradicional" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('cookie-tradicional', 1)">+</button>
                     </div>
                     <div class="contador">
                       <span>Cookie de Red Velvet</span>
+                      <span class="preco-produto">R$ 3,50</span>
                       <button class="btn-menos" onclick="alterarQuantidade('cookie-red', -1)">-</button>
                       <input type="number" id="cookie-red" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('cookie-red', 1)">+</button>
                     </div>
                     <div class="contador">
                       <span>Cookie de Chocolate</span>
+                      <span class="preco-produto">R$ 3,50</span>
                       <button class="btn-menos" onclick="alterarQuantidade('cookie-chocolate', -1)">-</button>
                       <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
@@ -466,37 +497,40 @@
                   <div class="menu-contador">
                     <div class="contador">
                       <span>Cookie de Nutella</span>
+                      <span class="preco-produto">R$ 6,00</span>
                       <button class="btn-menos" onclick="alterarQuantidade('cookie-nutella', -1)">-</button>
                       <input type="number" id="cookie-nutella" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('cookie-nutella', 1)">+</button>
                     </div>
                     <div class="contador">
                       <span>Cookie de Red Velvet</span>
+                      <span class="preco-produto">R$ 6,00</span>
                       <button class="btn-menos" onclick="alterarQuantidade('cookie-red-recheado', -1)">-</button>
                       <input type="number" id="cookie-red-recheado" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('cookie-red-recheado', 1)">+</button>
                     </div>
                     <div class="contador">
                       <span>Cookie de Dois Amores</span>
+                      <span class="preco-produto">R$ 6,00</span>
                       <button class="btn-menos" onclick="alterarQuantidade('cookie-doisamores', -1)">-</button>
                       <input type="number" id="cookie-doisamores" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('cookie-doisamores', 1)">+</button>
                     </div>
                     <div class="contador">
                       <span>Cookie de Maracujá</span>
+                      <span class="preco-produto">R$ 6,00</span>
                       <button class="btn-menos" onclick="alterarQuantidade('cookie-maracuja', -1)">-</button>
                       <input type="number" id="cookie-maracuja" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('cookie-maracuja', 1)">+</button>
                     </div>
                     <div class="contador">
                       <span>Cookie Nevado</span>
+                      <span class="preco-produto">R$ 6,00</span>
                       <button class="btn-menos" onclick="alterarQuantidade('cookie-nevado', -1)">-</button>
                       <input type="number" id="cookie-nevado" value="0" min="0" oninput="validarQuantidade(this)">
                       <button class="btn-mais" onclick="alterarQuantidade('cookie-nevado', 1)">+</button>
                     </div>
                   </div><br>
-                  
-                  <p id="total-carrinho">Valor Total: R$ 0,00</p>
 
                   <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
                 </div>
@@ -504,68 +538,117 @@
                 <div class="tab-pane fade" id="tabs-4-4">
                   <h4>Brownies</h4>
                   <p>Que tal se deliciar com os nossos brownies?</p>
-                  <img src="images/brownie2.jpg" alt="" width="835" height="418"/>
+                  <img src="images/brownie2.jpg" alt="" width="835" height="418"/><br><br>
+                  <h4>Brownie Pedaço</h4>
                   <div class="menu-contador">
                     <div class="contador">
-                      <span>Brownie - Tradicional</span>
-                      <button class="btn-menos" onclick="alterarQuantidade('cookie-tradicional', -1)">-</button>
-                      <input type="number" id="cookie-tradicional" value="0" min="0" oninput="validarQuantidade(this)">
-                      <button class="btn-mais" onclick="alterarQuantidade('cookie-tradicional', 1)">+</button>
+                      <span>Brownie Tradicional</span>
+                      <span class="preco-produto">R$ 4,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-tradicional', -1)">-</button>
+                      <input type="number" id="brownie-tradicional" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-tradicional', 1)">+</button>
                     </div>
                     <div class="contador">
-                      <span>Brownie - Cobertura de Leite ninho</span>
-                      <button class="btn-menos" onclick="alterarQuantidade('cookie-red', -1)">-</button>
-                      <input type="number" id="cookie-red" value="0" min="0" oninput="validarQuantidade(this)">
-                      <button class="btn-mais" onclick="alterarQuantidade('cookie-red', 1)">+</button>
+                      <span>Brownie de Nozes</span>
+                      <span class="preco-produto">R$ 5,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-nozes', -1)">-</button>
+                      <input type="number" id="brownie-nozes" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-nozes', 1)">+</button>
                     </div>
                     <div class="contador">
-                      <span>Brownie - Cobertura de Brigadeiro</span>
-                      <button class="btn-menos" onclick="alterarQuantidade('cookie-chocolate', -1)">-</button>
-                      <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
-                      <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
+                      <span>Brownie de M&Ms</span>
+                      <span class="preco-produto">R$ 5,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-mem', -1)">-</button>
+                      <input type="number" id="brownie-mem" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-mem', 1)">+</button>
+                    </div>
+                  </div><br>
+                  <h4>Brownie com Cobertura</h4>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Brownie - Leite Ninho</span>
+                      <span class="preco-produto">R$ 5,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-leite-ninho', -1)">-</button>
+                      <input type="number" id="brownie-leite-ninho" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-leite-ninho', 1)">+</button>
                     </div>
                     <div class="contador">
-                      <span>Brownie - Cobertura de Nutella</span>
-                      <button class="btn-menos" onclick="alterarQuantidade('cookie-chocolate', -1)">-</button>
-                      <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
-                      <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
+                      <span>Brownie de Brigadeiro</span>
+                      <span class="preco-produto">R$ 5,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-brigadeiro', -1)">-</button>
+                      <input type="number" id="brownie-brigadeiro" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-brigadeiro', 1)">+</button>
                     </div>
                     <div class="contador">
-                      <span>Brownie Pedaço - Nozes</span>
-                      <button class="btn-menos" onclick="alterarQuantidade('cookie-chocolate', -1)">-</button>
-                      <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
-                      <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
+                      <span>Brownie de Nutella</span>
+                      <span class="preco-produto">R$ 6,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-nutella', -1)">-</button>
+                      <input type="number" id="brownie-nutella" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-nutella', 1)">+</button>
+                    </div>
+                  </div><br>
+                  <h4>Fatia Pizza Brownie</h4>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Brownie de Nozes</span>
+                      <span class="preco-produto">R$ 8,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-pizza-nozes', -1)">-</button>
+                      <input type="number" id="brownie-pizza-nozes" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-pizza-nozes', 1)">+</button>
                     </div>
                     <div class="contador">
-                      <span>Brownie Pedaço - M&Ms</span>
-                      <button class="btn-menos" onclick="alterarQuantidade('cookie-chocolate', -1)">-</button>
-                      <input type="number" id="cookie-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
-                      <button class="btn-mais" onclick="alterarQuantidade('cookie-chocolate', 1)">+</button>
+                      <span>Brownie de Ninho com Nutella</span>
+                      <span class="preco-produto">R$ 8,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-pizza-ninho-nutella', -1)">-</button>
+                      <input type="number" id="brownie-pizza-ninho-nutella" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-pizza-ninho-nutella', 1)">+</button>
                     </div>
-                    <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                    <div class="contador">
+                      <span>Brownie de Ninho com Uva</span>
+                      <span class="preco-produto">R$ 8,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-pizza-ninho-uva', -1)">-</button>
+                      <input type="number" id="brownie-pizza-ninho-uva" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-pizza-ninho-uva', 1)">+</button>
+                    </div>
+                    <div class="contador">
+                      <span>Brownie de Ninho com Morango</span>
+                      <span class="preco-produto">R$ 8,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-pizza-ninho-morango', -1)">-</button>
+                      <input type="number" id="brownie-pizza-ninho-morango" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-pizza-ninho-morango', 1)">+</button>
+                    </div>
+                  </div><br>
+                  <h4>Snack de Brownie</h4>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Pedaço de Brownie Banhado no chocolate ao Leite (100g o potinho)</span>
+                      <span class="preco-produto">R$ 8,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-snack-chocolate', -1)">-</button>
+                      <input type="number" id="brownie-snack-chocolate" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-snack-chocolate', 1)">+</button>
+                    </div>
+                  </div><br>
+                  <h4>Brownie com Brigadeiro</h4>
+                  <div class="menu-contador">
+                    <div class="contador">
+                      <span>Mini Pedaços de Brownie com Brigadeiro em Cima</span>
+                      <span class="preco-produto">R$ 3,00</span>
+                      <button class="btn-menos" onclick="alterarQuantidade('brownie-cobertura-brigadeiro', -1)">-</button>
+                      <input type="number" id="brownie-cobertura-brigadeiro" value="0" min="0" oninput="validarQuantidade(this)">
+                      <button class="btn-mais" onclick="alterarQuantidade('brownie-cobertura-brigadeiro', 1)">+</button>
+                    </div>
+
                   </div>
+                  <button class="button button-xl button-primary button-winona" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+
                 </div>
-      
-                <div class="tab-pane fade" id="tabs-4-5">
-                  <h4>Cestas</h4>
-                  <p>Monte sua cesta personalizada e surpreenda quem você ama!</p>
-                </div>
-      
+
                 <div class="tab-pane fade" id="tabs-4-6">
                   <h4>Empadinhas</h4>
                   <p>Você nunca viu nada igual! As nossas empadinhas vão te surpreender!</p>
                   <img src="images/empadinha2.jpg" alt="" width="835" height="418"/>
                 </div>
-      
-                <div class="tab-pane fade" id="tabs-4-7">
-                  <h4>Ovos de Colher</h4>
-                  <p>Deliciosos ovos de colher artesanais feitos com muito carinho...</p>
-                  <img src="images/ovo_maracuja.jpg" alt="" width="835" height="418"/>
-                  <div class="menu-contador">
-                  
-                  </div>
-                </div>
-      
+
                 <div class="tab-pane fade" id="tabs-4-8">
                   <h4>Carrinho Gourmet</h4>
                   <p>Realize a locação do nosso carrinho gourmet para seu evento.</p>
